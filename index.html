@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Idionautic Agent Test</title>
+</head>
+<body>
+    <h1>Idionautic Agent Test</h1>
+    <script type="module">
+        import init, { record_event } from './pkg/idionautic_agent.js';
+
+        async function main() {
+            await init();
+            record_event("widgetRendered", "dashboard", 5);
+        }
+
+        main();
+    </script>
+</body>
+</html>
+
