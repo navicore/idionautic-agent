@@ -20,6 +20,9 @@ Three Main Features:
 Initially data is logged to a custom service that logs data to an embedded
 sqlite DB.
 
+The Agent is created in WebAssembly - source is compiled from Rust for
+speed and safety.
+
 Eventually, the server will support forwarding to OpenTelemetry gateways as well
 as an experimental wide-record analytics store designed to support columnar
 storage tolerant of high-cardinality values in support of observability.
