@@ -11,10 +11,10 @@ app and the performance of the app components and APIs.
 
 Three Main Features:
 
-* __no code changes__ - the application code being instrumented is unchanged by the
+1. __no code changes__ - the application code being instrumented is unchanged by the
   introduction of this agent
-* __network efficient__ - pre-aggregated store-and-forwarding of data by the agent instance
-* __high-cardinality__ keys are allowed - observabilty requires high-level metrics
+2. __network efficient__ - pre-aggregated store-and-forwarding of data by the agent instance
+3. __high-cardinality__ keys are allowed - observabilty requires high-level metrics
   to be able to be drilled into down to the user and transaction level
 
 Initially data is logged to a custom service that logs data to an embedded
