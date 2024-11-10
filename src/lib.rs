@@ -4,6 +4,9 @@ use wasm_bindgen::JsValue;
 use wasm_bindgen_futures::JsFuture;
 use web_sys::{window, Headers, Request, RequestInit, Response};
 
+/// # Errors
+///
+/// Will return `Err` if data can not be sent to the server
 #[wasm_bindgen]
 pub async fn record_event(
     url: &str,
