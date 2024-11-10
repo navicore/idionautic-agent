@@ -17,15 +17,14 @@ Three Main Features:
 3. __high-cardinality__ keys are allowed - observabilty requires high-level metrics
   to be able to be drilled into down to the user and transaction level
 
-Initially data is logged to a custom service that logs data to an embedded
-sqlite DB.
-
 The agent is created using `Rust` and `WebAssembly` for speed and safety - all
 modern browsers support `wasm` / `WebAssembly` now.
 
-Eventually, the server will support forwarding to OpenTelemetry gateways as well
-as an experimental wide-record analytics store designed to support columnar
-storage tolerant of high-cardinality values in support of observability.
+In the initial POC implementation, data is logged to a custom service that logs
+data to an embedded sqlite DB. Eventually, the server will support forwarding to
+`OpenTelemetry` gateways as well as an experimental `wide-record` analytics
+store designed to support columnar storage tolerant of high-cardinality values
+in support of `observability`.
 
 ![Idionautic system is made of many distributed components](docs/idionautic_system.png)
 
