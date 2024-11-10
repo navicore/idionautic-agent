@@ -26,3 +26,16 @@ observation collection this agent performs.
 See https://github.com/navicore/idionautic-demo for a UI lab where the agent's
 ability to watch tags and events inside a webapp are demonstrated and debugged.
 
+Next Steps
+-----------
+* make the demo app render working tabs and buttons and checkboxes
+* make the demo app render output of API GET calls from the server
+* design spike for agent
+  * should phone home a configured freq with payloads
+  * should phone home a configured freq regardless of payloads
+  * should use response from server interaction to adjust frequency of the two
+    above calls
+  * what kinds of events can js monitor?
+  * what events should agent monitor?
+  * is the agent fully reactive or must it inspect, ie: is there a win3.1-like
+    loop?
