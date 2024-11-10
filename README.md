@@ -1,6 +1,8 @@
 UNDER CONSTRUCTION
 ===========
+
 An experiment in APM and observability.
+---------
 
 This repository creates a WebAssembly / Rust agent that is loaded into a client
 application via script tags.  The agent will watch the other js activity and
