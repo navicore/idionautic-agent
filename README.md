@@ -4,10 +4,10 @@ An Experiment in APM and Observability.
 UNDER CONSTRUCTION
 =============
 
-This repository creates a WebAssembly / Rust agent that is loaded into a client
-application via script tags.  The agent will watch the other js activity and
-report counter and timer observations of how the user is interacting with the
-app and the performance of the app components and APIs.
+This repository creates a `WebAssembly` / `Rust` agent that is loaded into a
+client application via script tags.  The agent will watch the other js activity
+and report counter and timer observations of how the user is interacting with
+the app and the performance of the app components and APIs.
 
 Three Main Features:
 
@@ -20,8 +20,8 @@ Three Main Features:
 Initially data is logged to a custom service that logs data to an embedded
 sqlite DB.
 
-The Agent is created in WebAssembly - source is compiled from Rust for
-speed and safety.
+The agent is created using `Rust` and `WebAssembly` for speed and safety - all
+modern browsers support `wasm` / `WebAssembly` now.
 
 Eventually, the server will support forwarding to OpenTelemetry gateways as well
 as an experimental wide-record analytics store designed to support columnar
