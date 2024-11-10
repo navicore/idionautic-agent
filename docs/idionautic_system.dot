@@ -1,0 +1,39 @@
+digraph IdionauticSystem {
+
+    "Observation Data" [shape=ellipse, style=dashed];
+    "Observation Data" -> "Idionautic Collector";
+
+    subgraph cluster_browser {
+        label = "User's Browser";
+            style = dashed;
+            color = gray;
+
+        subgraph cluster_app {
+            label = "WebApp HTML\nand WASM Runtime";
+            style = dashed;
+            color = gray;
+            "User WebApp Instance" [shape=box, style=filled, color=lightgray];
+            "Idionautic Agent" [shape=box, style=filled, color=lightblue];
+            
+            "Idionautic Agent" -> "User WebApp Instance" [label="observes"];
+        }
+    }
+
+    subgraph cluster_service  {
+        label = "Service Network";
+        style = dashed;
+        color = gray;
+
+        "Idionautic Collector" [shape=box, style=filled, color=lightblue];
+        "WebApp Server" [shape=box, style=filled, color=lightgray];
+        "OpenTelemetry Network" [shape=ellipse, style=filled, color=gold];
+        "SQLite DB" [shape=cylinder, style=filled, color=gold];
+        "Arrow Column In-Mem Store" [shape=cylinder, style=dotted, color=gold];
+        "Idionautic Agent" -> "Observation Data" [label="emits\npre-aggregated\ntelemetry"];
+        "Idionautic Collector" -> "SQLite DB" [label="inserts"];
+        "Idionautic Collector" -> "Arrow Column In-Mem Store" [label="appends"];
+        "Idionautic Collector" -> "OpenTelemetry Network" [label="sends"];
+    }
+    
+    "User WebApp Instance" -> "WebApp Server" [label="loads from"];
+}
