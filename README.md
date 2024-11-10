@@ -1,4 +1,4 @@
-An experiment in APM and observability.
+An Experiment in APM and Observability.
 ===========
 
 UNDER CONSTRUCTION
