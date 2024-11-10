@@ -2,6 +2,9 @@
 name = "idionautic-agent"
 version = "0.1.0"
 edition = "2021"
+description = "A WebAssembly agent for Idionautic Telemetry System"
+license = "MIT"
+repository = "https://github.com/navicore/idionautic-agent"
 
 [lib]
 crate-type = ["cdylib"]  # Required for building WebAssembly
