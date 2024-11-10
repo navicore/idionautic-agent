@@ -9,6 +9,14 @@ application via script tags.  The agent will watch the other js activity and
 report counter and timer observations of how the user is interacting with the
 app and the performance of the app components and APIs.
 
+Three Main Features:
+
+* no code changes - the application code being instrumented is unchanged by the
+  introduction of this agent
+* network efficient - pre-aggregated store-and-forwarding of data by the agent instance
+* high-cardinality keys are allowed - observabilty requires high-level metrics
+  to be able to be drilled into down to the user and transaction level
+
 Initially data is logged to a custom service that logs data to an embedded
 sqlite DB.
 
