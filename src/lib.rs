@@ -2,7 +2,6 @@ use serde_json::json;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsValue;
 use wasm_bindgen_futures::JsFuture;
-use web_sys::console;
 use web_sys::{window, Headers, Request, RequestInit, Response};
 
 #[wasm_bindgen]
@@ -35,7 +34,6 @@ pub async fn record_event(
     let payload_str =
         serde_json::to_string(&payload).map_err(|e| JsValue::from_str(&e.to_string()))?;
     let payload_str_jsvalue = JsValue::from_str(&payload_str);
-    console::log_1(&payload_str_jsvalue);
 
     let opts = RequestInit::new();
     opts.set_method("POST");
